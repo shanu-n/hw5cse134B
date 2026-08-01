@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <title>Shanmukhi Nandiraju | Experiments</title>
+   <meta name="description" content="Demonstration of template, audio, video, canvas, and source elements.">
+   <link rel="icon" href="media/logo.png" type="image/png">
+   <link rel="stylesheet" href="style.css">
+
+   <style>
+       body {
+           border: 1px solid black;
+       }
+   </style>
+</head>
+<body>
+
+   <header>
+       <img src="media/logo.png" alt="Shanmukhi Nandiraju Logo" width="50" height="50">
+       <b>Shanmukhi Nandiraju</b>
+
+       <nav>
+           <ul>
+               <li><a href="index.html">Home</a></li>
+               <li><a href="about.html">About</a></li>
+               <li><a href="resume.html">Resume</a></li>
+               <li><a href="contact.html">Contact</a></li>
+               <li><a href="experiments.html"><strong>Experimental Tags</strong></a></li>
+           </ul>
+       </nav>
+   </header>
+
+   <hr>
+
+   <main>
+       <h1>Experimental Media &amp; Tags</h1>
+       <p>A demonstration page for elements not otherwise used across the site.</p>
+
+       <section>
+           <h2>Audio and Video</h2>
+           <audio controls>
+               <source src="media/sample.mp3" type="audio/mpeg">
+               Your browser does not support the audio element.
+           </audio>
+
+           <video controls width="300">
+               <source src="media/sample.mp4" type="video/mp4">
+               Your browser does not support the video element.
+           </video>
+       </section>
+
+       <hr>
+
+       <section>
+           <h2>Canvas and SVG</h2>
+           <canvas id="demoCanvas" width="150" height="75">
+               Your browser does not support the canvas element.
+           </canvas>
+           <script>
+               const canvas = document.getElementById("demoCanvas");
+               const ctx = canvas.getContext("2d");
+               ctx.fillStyle = "blue";
+               ctx.fillRect(10, 10, 50, 50);
+           </script>
+
+           <svg width="50" height="50" aria-label="Simple red circle">
+               <circle cx="25" cy="25" r="20" fill="red" />
+           </svg>
+       </section>
+
+       <hr>
+
+       <section>
+           <h2>Template</h2>
+           <template id="hiddenContent">
+               <p>This content is hidden by default</p>
+           </template>
+           <button type="button">Button Placeholder</button>
+       </section>
+   </main>
+
+   <hr>
+
+   <footer>
+       <nav aria-label="Social Links">
+           <ul>
+               <li><a href="https://linkedin.com/in/nandirajushanmukhi">LinkedIn</a></li>
+               <li><a href="https://github.com/shanu-n">GitHub</a></li>
+               <li><a href="mailto:shnandiraju@ucsd.edu">Email</a></li>
+           </ul>
+       </nav>
+       <p>&copy; 2026 Shanmukhi Nandiraju. Built with valid, semantic HTML!</p>
+
+       <hello-world></hello-world>
+       <script>
+           class HelloWorld extends HTMLElement {
+               connectedCallback() {
+                   console.log("Hello World!");
+               }
+           }
+           customElements.define("hello-world", HelloWorld);
+       </script>
+   </footer>
+
+   <noscript>
+       <p>JavaScript is required for some experimental elements to render correctly</p>
+   </noscript>
+
+</body>
+</html>

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <link rel="icon" href="media/logo.png" type="image/png">
+   <title>Shanmukhi Nandiraju | About Me</title>
+   <meta name="description" content="About Shanmukhi Nandiraju, UCSD Computer Science student.">
+   <link rel="stylesheet" href="style.css">
+   <style>
+       body {
+           border: 1px solid black;
+       }
+   </style>
+</head>
+<body>
+
+   <header>
+       <img src="media/logo.png" alt="Shanmukhi Nandiraju Logo" width="50" height="50">
+       <b>Shanmukhi Nandiraju</b>
+
+       <nav>
+           <ul>
+               <li><a href="index.html">Home</a></li>
+               <li><a href="about.html"><strong>About</strong></a></li>
+               <li><a href="resume.html">Resume</a></li>
+               <li><a href="contact.html">Contact</a></li>
+           </ul>
+       </nav>
+   </header>
+
+   <hr>
+
+   <main>
+       <h1>About Me</h1>
+
+       <picture>
+           <source srcset="media/profilepicshanu.webp" media="(min-width: 800px)">
+           <img src="media/profilepicshanu.jpg" alt="Photograph of Shanmukhi Nandiraju" width="200">
+       </picture>
+
+       <ul>
+           <li>
+               <svg width="20" height="20" aria-hidden="true">
+                   <circle cx="10" cy="10" r="8" fill="gray" />
+               </svg>
+               <strong>Education:</strong><br>
+               B.S. Computer Science<br>
+               <i>University of California, San Diego</i>
+           </li>
+           <li>
+               San Diego, California
+           </li>
+           <li>
+               <em>Email:</em> <a href="mailto:shnandiraju@ucsd.edu">shnandiraju@ucsd.edu</a>
+           </li>
+           <li>
+               <label for="grad-progress">Graduation: December 2026</label>
+               <progress id="grad-progress" value="85" max="100">85%</progress>
+           </li>
+       </ul>
+
+       <div>
+           <button type="button" id="open-dialog">Quick Connect</button>
+           <dialog id="contact-dialog">
+               <p>Contact details and quick links</p>
+               <button type="button">Close</button>
+           </dialog>
+       </div>
+
+       <article>
+        <h2>My Story</h2>
+           <section>
+               <h3>Background</h3>
+               <p>
+                   I am a student at <strong>UCSD</strong> pursuing a degree in Computer Science.
+                   My journey began with a curiosity for how the web works, leading me to explore
+                   <em>HTTP, HTML, and browser architecture</em>.
+                   I believe in building web experiences that are fast, accessible, and inclusive for all!
+               </p>
+               <p>
+                   Through my coursework and personal projects, I have developed a strong foundation
+                   in technical execution. I am currently focused on mastering <b>semantic markup</b>
+                   to ensure my code is interpreted correctly by both humans and AI!
+               </p>
+           </section>
+
+           <section>
+               <h2>Beyond Code</h2>
+               <p>
+                   Outside of programming, I enjoy exploring the beauty of San Diego! I love reading
+                   books in my free time, and I'm also part of an acapella team and love to sing!
+               </p>
+               <p>
+                   I am also focusing on <b>internationalization</b> and learning how to make
+                   software that can be used by anyone, regardless of their primary language!
+               </p>
+
+               <form>
+                   <fieldset>
+                       <legend>Site Feedback</legend>
+                       <label for="user-name">Name:</label>
+                       <input type="text" id="user-name" name="student_name" required>
+
+                       <label for="feedback-text">Comments:</label>
+                       <textarea id="feedback-text" name="comments"></textarea>
+
+                       <button type="submit">Send</button>
+                   </fieldset>
+               </form>
+           </section>
+       </article>
+   </main>
+
+   <hr>
+
+   <footer>
+       <nav aria-label="Social Links">
+           <ul>
+               <li><a href="https://linkedin.com/in/nandirajushanmukhi">LinkedIn</a></li>
+               <li><a href="https://github.com/shanu-n">GitHub</a></li>
+               <li><a href="mailto:shnandiraju@ucsd.edu">Email</a></li>
+           </ul>
+       </nav>
+       <p>&copy; 2026 Shanmukhi Nandiraju.</p>
+       <span>Site v1.0.0</span>
+       <iframe src="https://www.google.com/maps/embed?pb=dummy" title="Location Map" width="200" height="100"></iframe>
+
+       <hello-world></hello-world>
+       <script>
+           class HelloWorld extends HTMLElement {
+               connectedCallback() {
+                   console.log("Hello World!");
+               }
+           }
+           customElements.define("hello-world", HelloWorld);
+       </script>
+   </footer>
+
+   <noscript>
+       <p>This site works best with JavaScript enabled, but it is still readable without it</p>
+   </noscript>
+
+</body>
+</html>

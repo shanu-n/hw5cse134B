@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <link rel="icon" href="media/logo.png" type="image/png">
+   <title>Shanmukhi Nandiraju | Contact</title>
+   <meta name="description" content="Contact information for Shanmukhi Nandiraju, UCSD Computer Science student.">
+   <link rel="stylesheet" href="style.css">
+   <style>
+       body {
+           border: 1px solid black;
+       }
+   </style>
+</head>
+<body>
+
+   <header>
+       <img src="media/logo.png" alt="Shanmukhi Nandiraju Logo" width="50" height="50">
+       <b>Shanmukhi Nandiraju</b>
+
+       <nav>
+           <ul>
+               <li><a href="index.html">Home</a></li>
+               <li><a href="about.html">About</a></li>
+               <li><a href="resume.html">Resume</a></li>
+               <li><a href="contact.html"><strong>Contact</strong></a></li>
+           </ul>
+       </nav>
+   </header>
+
+   <hr>
+
+   <main>
+       <h1>Let's Connect!</h1>
+       <p>I'm always open to discussing new opportunities, collaborations, or just having a chat!</p>
+
+       <section>
+        <h2>Contact Information</h2>
+           <ul>
+               <li>
+                   <img src="media/email.png" alt="" width="40" height="40">
+                   <strong>Email:</strong>
+                   <a href="mailto:shnandiraju@ucsd.edu">shnandiraju@ucsd.edu</a>
+               </li>
+               <li>
+                   <img src="media/github.png" alt="" width="40" height="40">
+                   <strong>GitHub:</strong>
+                   <a href="https://github.com/shanu-n">github.com/shanu-n</a>
+               </li>
+               <li>
+                   <img src="media/linkedin.png" alt="" width="40" height="40">
+                   <strong>LinkedIn:</strong>
+                   <a href="https://linkedin.com/in/nandirajushanmukhi">linkedin.com/in/nandirajushanmukhi</a>
+               </li>
+           </ul>
+       </section>
+
+       <p><em>Thank you for stopping by! I look forward to hearing from you.</em></p>
+   </main>
+
+   <hr>
+
+   <footer>
+       <nav aria-label="Social Links">
+           <ul>
+               <li><a href="https://linkedin.com/in/nandirajushanmukhi">LinkedIn</a></li>
+               <li><a href="https://github.com/shanu-n">GitHub</a></li>
+               <li><a href="mailto:shnandiraju@ucsd.edu">Email</a></li>
+           </ul>
+       </nav>
+       <p>&copy; 2026 Shanmukhi Nandiraju.</p>
+
+       <hello-world></hello-world>
+       <script>
+           class HelloWorld extends HTMLElement {
+               connectedCallback() {
+                   console.log("Hello World!");
+               }
+           }
+           customElements.define("hello-world", HelloWorld);
+       </script>
+   </footer>
+
+   <noscript>
+       <p>This site is functional without JavaScript, following Progressive Enhancement.</p>
+   </noscript>
+
+</body>
+</html>

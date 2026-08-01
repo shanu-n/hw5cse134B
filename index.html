@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <link rel="icon" href="media/logo.png" type="image/png">
+   <title>Shanmukhi Nandiraju | Software Engineer Portfolio</title>
+   <meta name="description" content="Personal portfolio of Shanmukhi Nandiraju, UCSD Computer Science student.">
+   <link rel="stylesheet" href="style.css">
+   <style>
+       body {
+           border: 1px solid black;
+       }
+
+       profile-tag {
+           display: inline-block;
+           border: 1px solid black;
+           padding: 4px 8px;
+       }
+   </style>
+</head>
+<body>
+
+   <header>
+       <img src="media/logo.png" alt="Shanmukhi Nandiraju Logo" width="50" height="50">
+       <b>Shanmukhi Nandiraju</b>
+
+       <nav>
+           <ul>
+               <li><a href="index.html"><strong>Home</strong></a></li>
+               <li><a href="about.html">About</a></li>
+               <li><a href="resume.html">Resume</a></li>
+               <li><a href="contact.html">Contact</a></li>
+               <li><a href="experiments.html">Experimental Tags</a></li>
+           </ul>
+       </nav>
+   </header>
+
+   <hr>
+
+   <main>
+       <section>
+           <img src="media/profilepicshanu.jpg" alt="Headshot of Shanmukhi Nandiraju" width="200">
+
+           <h1>Building clean, scalable solutions through semantic code</h1>
+           <p>Computer Science student at <em>UCSD</em> who is passionate about building purposeful, impactful technology.</p>
+           <profile-tag>Software Engineer &amp; UCSD Computer Science Student</profile-tag>
+           <button type="button">Get In Touch</button>
+       </section>
+
+       <hr>
+
+       <section>
+           <h2>About Me</h2>
+           <p>I love turning complex problems into simple, elegant solutions.</p>
+           <a href="about.html">Learn more about me &rarr;</a>
+
+           <picture>
+               <source srcset="media/about-preview.webp" type="image/webp">
+               <img src="media/about-preview.jpg" alt="An image of chaotic lines slowly unraveling into a straight path with an arrow pointing to a glowing lightbulb at the end, representing finding clarity in complexity.">
+           </picture>
+       </section>
+   </main>
+
+   <hr>
+
+   <footer>
+       <nav aria-label="Social Links">
+           <ul>
+               <li><a href="https://linkedin.com/in/nandirajushanmukhi">LinkedIn</a></li>
+               <li><a href="https://github.com/shanu-n">GitHub</a></li>
+               <li><a href="mailto:shnandiraju@ucsd.edu">Email</a></li>
+           </ul>
+       </nav>
+       <p>&copy; 2026 Shanmukhi Nandiraju.</p>
+
+       <hello-world></hello-world>
+       <script>
+           class HelloWorld extends HTMLElement {
+               connectedCallback() {
+                   console.log("Hello World!");
+               }
+           }
+           customElements.define("hello-world", HelloWorld);
+       </script>
+   </footer>
+
+   <noscript>
+       <p>This site is functional without JavaScript, following Progressive Enhancement.</p>
+   </noscript>
+
+</body>
+</html>
