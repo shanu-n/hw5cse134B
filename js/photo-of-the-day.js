@@ -111,11 +111,13 @@ class PhotoOfTheDay extends HTMLElement {
         const status = this.querySelector('.status-message');
         const refreshBtn = this.querySelector('.refresh-btn');
     
-        if (message) {
-            status.textContent = message;
-            status.hidden = false;
-        } else {
-            status.hidden = true;
+        if (status) {
+            if (message) {
+                status.textContent = message;
+                status.hidden = false;
+            } else {
+                status.hidden = true;
+            }
         }
     
         if (refreshBtn) {
