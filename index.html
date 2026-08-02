@@ -17,6 +17,21 @@
            padding: 4px 8px;
        }
    </style>
+   <!-- Prevent FOCT by applying the theme before the body renders -->
+    <script>
+        (function() {
+            try {
+                const savedTheme = localStorage.getItem('theme');
+                if (savedTheme && savedTheme !== 'system') {
+                    // Apply the saved state to the root <html> element immediately
+                    document.documentElement.setAttribute('data-theme', savedTheme);
+                }
+            } catch (e) {
+                // Handle cases where localStorage is unavailable
+            }
+        })();
+    </script>
+    <script src="./js/theme.js" type="module"></script>
 </head>
 <body>
 
@@ -33,6 +48,15 @@
                <li><a href="experiments.html">Experimental Tags</a></li>
            </ul>
        </nav>
+
+       <section id="theme-switcher" hidden>
+            <label for="theme-select">Theme:</label>
+            <select id="theme-select">
+                <option value="system">System (Auto)</option>
+                <option value="light">Light</option>
+                <option value="dark">Dark</option>
+            </select>
+        </section>
    </header>
 
    <hr>
@@ -62,6 +86,28 @@
    </main>
 
    <hr>
+
+    <section>
+        <h2>Today's Featured Photo</h2>
+        <!-- Load the 5th page of images by default -->
+        <photo-of-the-day page="5">
+            <p>Featured images are currently unavailable. Please check your internet connection or enable JavaScript.</p>
+        </photo-of-the-day>
+    </section>
+
+    <!-- The inert UI blueprint -->
+    <template id="photo-template">
+        <div class="photo-card">
+            <p class="status-message" hidden aria-live="polite"></p>
+            <figure class="photo-display">
+                <img src="" alt="" class="daily-image" loading="lazy">
+                <figcaption class="photo-credit"></figcaption>
+            </figure>
+            <button class="refresh-btn">Fetch New Image</button>
+        </div>
+    </template>
+
+    <script src="./js/photo-of-the-day.js" type="module"></script>
 
    <footer>
        <nav aria-label="Social Links">

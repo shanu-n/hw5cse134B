@@ -1,0 +1,54 @@
+/* Base Variables (Light Mode/Default) */
+:root {
+    --bg-color: #ffffff;
+    --text-color: #000000;
+}
+
+/* System Dark Mode Baseline */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --bg-color: #121212;
+        --text-color: #ffffff;
+    }
+}
+
+/* User Overrides */
+[data-theme="light"] {
+    --bg-color: #ffffff;
+    --text-color: #000000;
+}
+
+[data-theme="dark"] {
+    --bg-color: #121212;
+    --text-color: #ffffff;
+}
+
+/* Apply variables to the page */
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: background-color 0.3s ease;
+}
+
+/* State-based styling (EATS PARTS) */
+photo-of-the-day[state="loading"] .photo-display,
+photo-of-the-day[state="error"] .photo-display {
+    display: none; /* Hide image during loading/error */
+}
+
+photo-of-the-day[state="error"] .status-message {
+    color: #d93025; /* Standard error color */
+    font-weight: bold;
+}
+
+/* Idle state */
+photo-of-the-day[state="idle"] .status-message {
+    display: none;
+}
+
+/* Accessibility: ensure the image doesn't blow out the layout */
+photo-of-the-day img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
