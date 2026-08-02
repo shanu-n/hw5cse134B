@@ -29,10 +29,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // 3. Helper to apply the theme state to the root
     function applyTheme(theme) {
-        if (theme === 'system') {
-            root.removeAttribute('data-theme');
-        } else {
-            root.setAttribute('data-theme', theme);
-        }
+        root.setAttribute('data-theme', theme);
     }
 });
