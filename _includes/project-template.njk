@@ -1,0 +1,16 @@
+---
+layout: base-layout.njk
+---
+
+<main id="main-content">
+    <h1>{{ title }}</h1>
+    <p>{{ description }}</p>
+    <p><strong>Tech used:</strong> {{ tech }}</p>
+    <a href="{{ link }}" target="_blank" rel="noopener">View on GitHub</a>
+
+    <hr>
+
+    {{ content | safe }}
+
+    <a href="/projects/">&larr; Back to all projects</a>
+</main>

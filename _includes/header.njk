@@ -1,0 +1,21 @@
+<header>
+    <img src="/media/logo.png" alt="Shanmukhi Nandiraju Logo" width="50" height="50">
+    <b>{{ site.authorName }}</b>
+
+    <nav>
+        <ul>
+            {% for item in site.nav %}
+                <li><a href="{{ item.url }}" {% if page.url == item.url %}aria-current="page"{% endif %}>{{ item.label }}</a></li>
+            {% endfor %}
+        </ul>
+    </nav>
+
+    <section id="theme-switcher" hidden>
+        <label for="theme-select">Theme:</label>
+        <select id="theme-select">
+            <option value="system">System (Auto)</option>
+            <option value="light">Light</option>
+            <option value="dark">Dark</option>
+        </select>
+    </section>
+</header>

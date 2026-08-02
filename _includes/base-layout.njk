@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="system">
+<head>
+    {% include "metadata.njk" %}
+    <link rel="stylesheet" href="/style.css">
+
+    <script>
+        (function() {
+            try {
+                const savedTheme = localStorage.getItem('theme');
+                if (savedTheme && savedTheme !== 'system') {
+                    document.documentElement.setAttribute('data-theme', savedTheme);
+                }
+            } catch (e) {}
+        })();
+    </script>
+    <script src="/js/theme.js" type="module"></script>
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    <template id="photo-template">
+        <div class="photo-card">
+            <p class="status-message" hidden aria-live="polite"></p>
+            <figure class="photo-display">
+                <img src="" alt="" class="daily-image" loading="lazy">
+                <figcaption class="photo-credit"></figcaption>
+            </figure>
+            <button class="refresh-btn">Fetch New Image</button>
+        </div>
+    </template>
+
+    {% include "header.njk" %}
+
+    {{ content | safe }}
+
+    {% include "footer.njk" %}
+
+</body>
+</html>

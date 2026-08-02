@@ -1,113 +1,61 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-   <meta charset="UTF-8">
-   <link rel="icon" href="media/logo.png" type="image/png">
-   <title>Shanmukhi Nandiraju | Resume</title>
-   <meta name="description" content="Resume and technical skills of Shanmukhi Nandiraju, UCSD Computer Science student.">
-   <link rel="stylesheet" href="style.css">
-   <style>
-       body {
-           border: 1px solid black;
-       }
-   </style>
-</head>
-<body>
+---
+title: Resume
+description: Resume and technical skills of Shanmukhi Nandiraju, UCSD Computer Science student.
+layout: base-layout.njk
+---
 
-   <header>
-       <img src="media/logo.png" alt="Shanmukhi Nandiraju Logo" width="50" height="50">
-       <b>Shanmukhi Nandiraju</b>
+<main id="main-content">
+    <h1>Resume</h1>
 
-       <nav>
-           <ul>
-               <li><a href="index.html">Home</a></li>
-               <li><a href="about.html">About</a></li>
-               <li><a href="resume.html"><strong>Resume</strong></a></li>
-               <li><a href="contact.html">Contact</a></li>
-           </ul>
-       </nav>
-   </header>
+    <section>
+        <h2>Technical Skills</h2>
+        <ul>
+            <li>
+                <label for="skill-html">HTML</label>
+                <progress id="skill-html" value="90" max="100">90%</progress>
+            </li>
+            <li>
+                <label for="skill-css">CSS</label>
+                <progress id="skill-css" value="85" max="100">85%</progress>
+            </li>
+            <li>
+                <label for="skill-js">JavaScript</label>
+                <progress id="skill-js" value="75" max="100">75%</progress>
+            </li>
+            <li>
+                <label for="skill-python">Python</label>
+                <progress id="skill-python" value="80" max="100">80%</progress>
+            </li>
+            <li>
+                <label for="skill-java">Java</label>
+                <progress id="skill-java" value="70" max="100">70%</progress>
+            </li>
+            <li>
+                <label for="skill-sql">SQL</label>
+                <progress id="skill-sql" value="65" max="100">65%</progress>
+            </li>
+        </ul>
+    </section>
 
-   <hr>
+    <hr>
 
-   <main>
-       <h1>Resume</h1>
+    <section>
+        <h2>Experience</h2>
+        <ol>
+            <li>
+                <h3>Software Engineering Intern</h3>
+                <p>Contributed to a web application's front-end, focusing on accessible and semantic markup.</p>
+            </li>
+            <li>
+                <h3>Teaching Assistant, Introduction to Programming</h3>
+                <p>Held office hours and graded assignments for an introductory computer science course.</p>
+            </li>
+        </ol>
 
-       <section>
-           <h2>Technical Skills</h2>
-           <ul>
-               <li>
-                   <label for="skill-html">HTML</label>
-                   <progress id="skill-html" value="90" max="100">90%</progress>
-               </li>
-               <li>
-                   <label for="skill-css">CSS</label>
-                   <progress id="skill-css" value="85" max="100">85%</progress>
-               </li>
-               <li>
-                   <label for="skill-js">JavaScript</label>
-                   <progress id="skill-js" value="75" max="100">75%</progress>
-               </li>
-               <li>
-                   <label for="skill-python">Python</label>
-                   <progress id="skill-python" value="80" max="100">80%</progress>
-               </li>
-               <li>
-                   <label for="skill-java">Java</label>
-                   <progress id="skill-java" value="70" max="100">70%</progress>
-               </li>
-               <li>
-                   <label for="skill-sql">SQL</label>
-                   <progress id="skill-sql" value="65" max="100">65%</progress>
-               </li>
-           </ul>
-       </section>
+        <a href="/media/shanmukhi_resume.pdf" download>Download Full Resume (PDF)</a>
+    </section>
+</main>
 
-       <hr>
-
-       <section>
-           <h2>Experience</h2>
-           <ol>
-               <li>
-                   <h3>Role #1 - Software Engineering Intern</h3>
-                   <p>Contributed to a web application's front-end, focusing on accessible and semantic markup.</p>
-               </li>
-               <li>
-                   <h3>Role #2 - Teaching Assistant, Introduction to Programming</h3>
-                   <p>Held office hours and graded assignments for an introductory computer science course.</p>
-               </li>
-           </ol>
-
-           <a href="media/shanmukhi_resume.pdf" download>Download Full Resume (PDF)</a>
-       </section>
-   </main>
-
-   <hr>
-
-   <footer>
-       <nav aria-label="Social Links">
-           <ul>
-               <li><a href="https://linkedin.com/in/nandirajushanmukhi">LinkedIn</a></li>
-               <li><a href="https://github.com/shanu-n">GitHub</a></li>
-               <li><a href="mailto:shnandiraju@ucsd.edu">Email</a></li>
-           </ul>
-       </nav>
-       <p>&copy; 2026 Shanmukhi Nandiraju.</p>
-
-       <hello-world></hello-world>
-       <script>
-           class HelloWorld extends HTMLElement {
-               connectedCallback() {
-                   console.log("Hello World!");
-               }
-           }
-           customElements.define("hello-world", HelloWorld);
-       </script>
-   </footer>
-
-   <noscript>
-       <p>This site is functional without JavaScript, following Progressive Enhancement.</p>
-   </noscript>
-
-</body>
-</html>
+<noscript>
+    <p>This site is functional without JavaScript, following Progressive Enhancement.</p>
+</noscript>

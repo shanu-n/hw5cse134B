@@ -1,41 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-   <meta charset="UTF-8">
-   <link rel="icon" href="media/logo.png" type="image/png">
-   <title>Shanmukhi Nandiraju | About Me</title>
-   <meta name="description" content="About Shanmukhi Nandiraju, UCSD Computer Science student.">
-   <link rel="stylesheet" href="style.css">
-   <style>
-       body {
-           border: 1px solid black;
-       }
-   </style>
-</head>
-<body>
+---
+title: About Me
+description: About Shanmukhi Nandiraju, UCSD Computer Science student.
+layout: base-layout.njk
+---
 
-   <header>
-       <img src="media/logo.png" alt="Shanmukhi Nandiraju Logo" width="50" height="50">
-       <b>Shanmukhi Nandiraju</b>
-
-       <nav>
-           <ul>
-               <li><a href="index.html">Home</a></li>
-               <li><a href="about.html"><strong>About</strong></a></li>
-               <li><a href="resume.html">Resume</a></li>
-               <li><a href="contact.html">Contact</a></li>
-           </ul>
-       </nav>
-   </header>
-
-   <hr>
-
-   <main>
+   <main id="main-content">
        <h1>About Me</h1>
 
        <picture>
-           <source srcset="media/profilepicshanu.webp" media="(min-width: 800px)">
-           <img src="media/profilepicshanu.jpg" alt="Photograph of Shanmukhi Nandiraju" width="200">
+            <source srcset="/media/profilepicshanu.webp" media="(min-width: 800px)">
+            <img src="/media/profilepicshanu.jpg" alt="Photograph of Shanmukhi Nandiraju" width="200">
        </picture>
 
        <ul>
@@ -60,12 +34,13 @@
        </ul>
 
        <div>
-           <button type="button" id="open-dialog">Quick Connect</button>
-           <dialog id="contact-dialog">
-               <p>Contact details and quick links</p>
-               <button type="button">Close</button>
-           </dialog>
-       </div>
+        <button type="button" id="open-connect" hidden>Quick Connect</button>
+        <dialog id="connect-dialog">
+          <p>Contact details and quick links</p>
+          <button type="button" id="close-connect">Close</button>
+        </dialog>
+      </div>
+      <script src="/js/dialog.js" type="module"></script>
 
        <article>
         <h2>My Story</h2>
@@ -85,7 +60,7 @@
            </section>
 
            <section>
-               <h2>Beyond Code</h2>
+               <h3>Beyond Code</h3>
                <p>
                    Outside of programming, I enjoy exploring the beauty of San Diego! I love reading
                    books in my free time, and I'm also part of an acapella team and love to sing!
@@ -111,34 +86,6 @@
        </article>
    </main>
 
-   <hr>
-
-   <footer>
-       <nav aria-label="Social Links">
-           <ul>
-               <li><a href="https://linkedin.com/in/nandirajushanmukhi">LinkedIn</a></li>
-               <li><a href="https://github.com/shanu-n">GitHub</a></li>
-               <li><a href="mailto:shnandiraju@ucsd.edu">Email</a></li>
-           </ul>
-       </nav>
-       <p>&copy; 2026 Shanmukhi Nandiraju.</p>
-       <span>Site v1.0.0</span>
-       <iframe src="https://www.google.com/maps/embed?pb=dummy" title="Location Map" width="200" height="100"></iframe>
-
-       <hello-world></hello-world>
-       <script>
-           class HelloWorld extends HTMLElement {
-               connectedCallback() {
-                   console.log("Hello World!");
-               }
-           }
-           customElements.define("hello-world", HelloWorld);
-       </script>
-   </footer>
-
    <noscript>
        <p>This site works best with JavaScript enabled, but it is still readable without it</p>
    </noscript>
-
-</body>
-</html>

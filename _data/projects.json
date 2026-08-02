@@ -1,0 +1,20 @@
+[
+    {
+        "title": "Project One",
+        "description": "temp will add later",
+        "tech": "HTML, CSS, JavaScript",
+        "link": "https://github.com/shanu-n/project-one"
+    },
+    {
+        "title": "Project Two",
+        "description": "temp will add later",
+        "tech": "Python, Flask",
+        "link": "https://github.com/shanu-n/project-two"
+    },
+    {
+        "title": "Project Three",
+        "description": "temp will add later",
+        "tech": "React, Node.js",
+        "link": "https://github.com/shanu-n/project-three"
+    }
+]

@@ -1,0 +1,19 @@
+---
+title: Projects
+description: Projects done by Shanmukhi Nandiraju, UCSD Computer Science student.
+layout: base-layout.njk
+---
+
+<main id="main-content">
+    <h1>Projects</h1>
+    <ul>
+        {% for project in collections.all %}
+        {% if project.data.layout == "project-template.njk" %}
+        <li>
+            <a href="{{ project.url }}">{{ project.data.title }}</a>
+            <p>{{ project.data.description }}</p>
+        </li>
+        {% endif %}
+        {% endfor %}
+    </ul>
+</main>

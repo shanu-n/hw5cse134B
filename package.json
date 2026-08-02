@@ -1,0 +1,16 @@
+{
+  "name": "hw5cse134b",
+  "version": "1.0.0",
+  "description": "I chose Option A. The CSS handles theming entirely on its own via @media (prefers-color-scheme: dark). if JS is off, the hidden attribute keeps the switcher invisible so there's no broken control sitting there doing nothing.",
+  "main": "index.js",
+  "scripts": {
+    "start": "eleventy --serve",
+    "build": "eleventy"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@11ty/eleventy": "^3.1.6"
+  }
+}

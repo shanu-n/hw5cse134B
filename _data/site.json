@@ -1,0 +1,17 @@
+{
+    "siteTitle": "Shanmukhi Nandiraju — Portfolio",
+    "authorName": "Shanmukhi Nandiraju",
+    "currentYear": 2026,
+    "nav": [
+        { "label": "Home", "url": "/" },
+        { "label": "About", "url": "/about/" },
+        { "label": "Resume", "url": "/resume/" },
+        { "label": "Contact", "url": "/contact/" },
+        { "label": "Experimental Tags", "url": "/experiments/" }
+    ],
+    "social": [
+        { "label": "LinkedIn", "url": "https://linkedin.com/in/nandirajushanmukhi" },
+        { "label": "GitHub", "url": "https://github.com/shanu-n" },
+        { "label": "Email", "url": "mailto:shnandiraju@ucsd.edu" }
+    ]
+}
