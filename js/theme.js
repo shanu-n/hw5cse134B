@@ -4,6 +4,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const themeContainer = document.getElementById('theme-switcher');
     const root = document.documentElement;
 
+    if (!themeSelect || !themeContainer) return;
+
     // Progressive Enhancement: Only show the picker if JS is working
     themeContainer.removeAttribute('hidden');
 

@@ -100,12 +100,9 @@ class PhotoOfTheDay extends HTMLElement {
     displayData(photo) {
         const img = this.querySelector('.daily-image');
         const caption = this.querySelector('.photo-credit');
-
-        // Safe rendering with textContent/setAttribute
         img.setAttribute('src', photo.download_url);
         img.setAttribute('alt', `A featured photo by ${photo.author}`);
-        caption.textContent = `Photo by: ${photo.author}`; // Attribution required
-
+        caption.textContent = `Photo by: ${photo.author}`;
         this.updateState('success');
     }
 
@@ -117,6 +114,10 @@ class PhotoOfTheDay extends HTMLElement {
             status.hidden = false;
         } else {
             status.hidden = true;
+        }
+
+        if (refreshBtn) {
+            refreshBtn.hidden = state !== 'error';
         }
     }
 }
