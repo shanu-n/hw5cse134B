@@ -107,15 +107,17 @@ class PhotoOfTheDay extends HTMLElement {
     }
 
     updateState(state, message = '') {
-        this.setAttribute('state', state); // Reflect state to DOM for styling
+        this.setAttribute('state', state);
         const status = this.querySelector('.status-message');
+        const refreshBtn = this.querySelector('.refresh-btn');
+    
         if (message) {
             status.textContent = message;
             status.hidden = false;
         } else {
             status.hidden = true;
         }
-
+    
         if (refreshBtn) {
             refreshBtn.hidden = state !== 'error';
         }
