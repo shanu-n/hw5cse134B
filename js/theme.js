@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
     themeContainer.removeAttribute('hidden');
 
     // 1. Load saved preference or default to 'system'
-    const savedTheme = localStorage.getItem('theme') || 'system';
+    const savedTheme = localStorage.getItem('theme') || 'nostalgia';
     themeSelect.value = savedTheme;
     applyTheme(savedTheme);
 
