@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="system">
+<html lang="en" data-theme="nostalgia">
 <head>
     {% include "metadata.njk" %}
     <link rel="stylesheet" href="/style.css">
@@ -7,7 +7,7 @@
     <script>
         (function() {
             try {
-                const savedTheme = localStorage.getItem('theme');
+                const savedTheme = localStorage.getItem('theme') || 'nostalgia';
                 if (savedTheme && savedTheme !== 'system') {
                     document.documentElement.setAttribute('data-theme', savedTheme);
                 }
