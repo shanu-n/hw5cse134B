@@ -19,7 +19,6 @@ document.addEventListener('DOMContentLoaded', () => {
         const selectedTheme = event.target.value;
         applyTheme(selectedTheme);
         
-        // Handle localStorage availability
         try {
             localStorage.setItem('theme', selectedTheme);
         } catch (e) {
